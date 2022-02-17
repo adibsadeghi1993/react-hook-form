@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <div className="App">
-      <h1>hook</h1>
+     <Header/>
+     <h1>hi</h1>
     </div>
   );
 }
