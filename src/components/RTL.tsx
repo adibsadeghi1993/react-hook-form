@@ -3,14 +3,16 @@ import {
   createTheme,
   ThemeProvider,
   StylesProvider,
+  
 } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 import { jssPreset } from "@mui/styles";
 import { create } from "jss";
 import rtl from "jss-rtl";
 
 const theme = createTheme({
-  direction: "rtl", // Both here and <body dir="rtl">
+  direction: "rtl", 
 });
 
 const jss = create({
@@ -25,6 +27,7 @@ function RTL(props:Props) {
   return (
     <StylesProvider jss={jss}>
       <ThemeProvider theme={theme}>
+        <CssBaseline/>
         {props.children}
       </ThemeProvider>
     </StylesProvider>
