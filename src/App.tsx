@@ -10,10 +10,10 @@ const App = () => {
     <RTL>
       <GlobalStyles/>
      <Header/>
-          <Container>
+          {/* <Container>
           <TextField label="Name" variant="standard" />
           <input type="text" placeholder="Name" />
-          </Container>
+          </Container> */}
       
     </RTL>
   )
