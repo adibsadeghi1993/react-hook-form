@@ -2,8 +2,14 @@ import React from 'react'
 import TextField from "@material-ui/core/TextField";
 
 import { HeaderContainer, StyledH } from './Form.styled';
+import {useForm,SubmitHandler} from "react-hook-form"
 
 type Props = {}
+
+type FormInputs={
+  email:string,
+  password:string
+}
 
 const Form = (props: Props) => {
   return (
