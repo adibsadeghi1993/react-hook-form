@@ -1,8 +1,8 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
-import { yupResolver } from "@hookform/resolvers";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { HeaderContainer, StyledH } from "./Form.styled";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import * as yup from "yup";
 
 type Props = {};
@@ -17,9 +17,9 @@ const schema = yup.object().shape({
     .string()
     .email("لطفا ایمیل صحیح وارد کنید")
     .required("وارد کردن ایمیل ضروری است"),
-    password: yup
+  password: yup
     .string()
-    .min(6,"حداقل باید شش کاراکتر باشد")
+    .min(6, "حداقل باید شش کاراکتر باشد")
     .required("وارد کردن پسورد ضروری است"),
 });
 
@@ -28,22 +28,55 @@ const Form = (props: Props) => {
     register,
     handleSubmit,
     watch,
-    formState: { error },
+    control,
+    formState: { errors },
   } = useForm<FormInputs>({
-    resolver:yupResolver(schema)
+    resolver: yupResolver(schema),
   });
 
   const formSubmitHandler: SubmitHandler<FormInputs> = (data: FormInputs) => {
     console.log(data);
   };
+
+  console.log(watch("email"))
   return (
     <>
       <HeaderContainer>
         <StyledH>ورود</StyledH>
       </HeaderContainer>
       <form onSubmit={handleSubmit(formSubmitHandler)}>
-        <TextField variant="standard" fullWidth label="نام کاربری/ایمیل" />
-        <TextField variant="standard" fullWidth label="نام کاربری/ایمیل" />
+        <Controller
+          name="email"
+          control={control}
+          defaultValue=""
+          render={({ field }) => (
+            <TextField
+              variant="standard"
+             
+              {...field}
+              fullWidth
+              label="نام کاربری/ایمیل"
+              error={!!errors.email}
+              helperText={errors.email ? errors.email?.message : ""}
+            />
+          )}
+        />
+        <Controller
+          name="password"
+          control={control}
+          defaultValue=""
+          render={({ field }) => (
+            <TextField
+              variant="standard"
+              {...field}
+              fullWidth
+              label="پسورد"
+              error={!!errors.password}
+              helperText={errors.password ? errors.password?.message : ""}
+            />
+          )}
+        />
+
         <button type="submit">ارسال</button>
       </form>
     </>
