@@ -3,10 +3,10 @@ import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { HeaderContainer, StyledH } from "./Form.styled";
+import { Button, CheckBoxContainer, HeaderContainer, StyledH } from "./Form.styled";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import * as yup from "yup";
-import { Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 
 type Props = {};
 
@@ -74,7 +74,8 @@ console.log(values)
             />
           )}
         />
-        <Controller
+       <Box sx={{mt:"15px"}}>
+       <Controller
           name="password"
           control={control}
           defaultValue={values.password}
@@ -90,8 +91,9 @@ console.log(values)
             />
           )}
         />
+       </Box>
 
-        <div>
+        <CheckBoxContainer>
         <FormControlLabel
         sx={{marginRight:0}}
        
@@ -116,9 +118,9 @@ console.log(values)
             </p>
           }
         />
-        </div>
+        </CheckBoxContainer>
 
-        <button type="submit">ارسال</button>
+        <Button type="submit">ارسال</Button>
       </form>
     </>
   );

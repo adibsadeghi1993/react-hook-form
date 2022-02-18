@@ -13,3 +13,26 @@ justify-content:center;
 margin-bottom:40px;
 
 `
+
+export const CheckBoxContainer=styled("div")`
+ margin-top:30px;
+
+ p{
+     margin-right:10px
+ }
+
+`
+
+export const Button=styled("button")`
+ display:block;
+ padding:6px 0;
+
+ width:100%;
+ outline:none;
+ border-radius:5px;
+
+ margin-top:40px;
+ color:white;
+ background-color:blue
+
+`
