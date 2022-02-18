@@ -9,6 +9,7 @@ export const Main = styled("section")`
 export const FormContainer = styled("div")`
   width: 40%;
   margin-right: 25px;
+  padding:0 0 0 50px;
 `;
 
 export const SignupImage = styled("div")`
