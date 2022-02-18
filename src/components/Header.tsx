@@ -1,10 +1,9 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import { styled } from "@mui/material/styles";
-import TextField from "@material-ui/core/TextField"
-import { Typography } from "@material-ui/core";
-import { Container } from "../styles/Container.styled";
 
+import { Container } from "../styles/Container.styled";
+import logo from "../assets/images/logo.svg"
 const StyledHeader = styled("header")`
 background-color:#f6f6f6;
 height:50px;
@@ -18,7 +17,10 @@ const Header = (props: Props) => {
     <StyledHeader>
       <Container>
       <div>
-        <div></div>
+        <div>
+          <img src={logo} alt="logo"/>
+
+        </div>
         <ul>
           <li>
             <a href="#">خانه</a>
