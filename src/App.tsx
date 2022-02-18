@@ -1,14 +1,17 @@
-import React from 'react';
-import Header from './components/Header';
+import React from 'react'
+import TextField from "@material-ui/core/TextField";
+import RTL from './components/RTL';
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     <Header/>
-     <h1>hi</h1>
-    </div>
-  );
+    <RTL>
+      <div dir="rtl">
+          <TextField label="Name" variant="standard" />
+          <input type="text" placeholder="Name" />
+        </div>
+    </RTL>
+  )
 }
 
-export default App;
+export default App
+
