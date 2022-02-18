@@ -6,10 +6,12 @@ type Props = {
 };
 
 export const StyledHeader = styled("header")`
-  background-color: #f6f6f6;
+  background-color: white;
   height: 50px;
   display: flex;
   align-items: center;
+  
+  box-shadow:0px 8px 8px 4px rgba(0,0,0,0.25)
 `;
 
 export const MainContent = styled("section")`
