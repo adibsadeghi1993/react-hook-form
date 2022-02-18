@@ -1,26 +1,39 @@
-import React from 'react'
+import React from "react";
 import TextField from "@material-ui/core/TextField";
 
-import { HeaderContainer, StyledH } from './Form.styled';
-import {useForm,SubmitHandler} from "react-hook-form"
+import { HeaderContainer, StyledH } from "./Form.styled";
+import { useForm, SubmitHandler } from "react-hook-form";
 
-type Props = {}
+type Props = {};
 
-type FormInputs={
-  email:string,
-  password:string
-}
+type FormInputs = {
+  email: string;
+  password: string;
+};
 
 const Form = (props: Props) => {
-  return (
-    <form>
-        <HeaderContainer>
-        <StyledH>ورود</StyledH>
-        </HeaderContainer>
-<TextField variant="standard" fullWidth label="نام کاربری/ایمیل"/>
-<TextField variant="standard" fullWidth label="نام کاربری/ایمیل"/>
-    </form>
-  )
-}
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { error },
+  } = useForm<FormInputs>();
 
-export default Form
+  const formSubmitHandler:SubmitHandler<FormInputs> =(data:FormInputs)=>{
+    console.log(data)
+  }
+  return (
+    <>
+      <HeaderContainer>
+        <StyledH>ورود</StyledH>
+      </HeaderContainer>
+      <form onSubmit={handleSubmit(formSubmitHandler)}>
+        <TextField variant="standard" fullWidth label="نام کاربری/ایمیل" />
+        <TextField variant="standard" fullWidth label="نام کاربری/ایمیل" />
+        <button type="submit">ارسال</button>
+      </form>
+    </>
+  );
+};
+
+export default Form;

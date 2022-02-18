@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@hookform/resolvers": "^2.8.8",
     "@material-ui/core": "^4.12.3",
     "@mui/material": "^5.4.2",
     "@mui/styled-engine-sc": "^5.4.2",
@@ -29,7 +30,8 @@
     "stylis": "^4.0.13",
     "stylis-plugin-rtl": "^1.1.0",
     "typescript": "^4.5.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
