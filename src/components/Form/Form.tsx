@@ -1,6 +1,6 @@
 import React from 'react'
 import TextField from "@material-ui/core/TextField";
-import { Typography } from '@material-ui/core';
+
 import { HeaderContainer, StyledH } from './Form.styled';
 
 type Props = {}
