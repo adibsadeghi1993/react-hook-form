@@ -10,7 +10,7 @@ const App = () => {
     <RTL>
       <GlobalStyles />
       <Header />
-      <Container>
+      <Container width="90%">
         <Auth />
       </Container>
     </RTL>

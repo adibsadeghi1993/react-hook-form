@@ -1,8 +1,8 @@
 import React from "react";
 import Form from "../components/Form";
 
-import { FormContainer, Main } from "../styles/Auth.styled";
-import signupImage from "../assets/images/image (1).svg"
+import { FormContainer, Main, SignupImage } from "../styles/Auth.styled";
+import signupImage from "../assets/images/image (1).svg";
 
 type Props = {};
 
@@ -10,11 +10,11 @@ const Auth = (props: Props) => {
   return (
     <Main>
       <FormContainer>
-          <Form/>
+        <Form />
       </FormContainer>
-      <div>
-          <img src={signupImage} alt="signup"/>
-      </div>
+      <SignupImage>
+        <img src={signupImage} alt="signup" />
+      </SignupImage>
     </Main>
   );
 };
