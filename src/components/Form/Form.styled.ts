@@ -30,7 +30,7 @@ export const Button=styled("button")`
  width:100%;
  outline:none;
  border-radius:5px;
-
+border:none;
  margin-top:40px;
  color:white;
  background-color:blue

@@ -73,7 +73,7 @@ export const LeftSection = styled("section")`
   /* align-items:center; */
 
   span:first-child {
-    border-left: 2px solid red;
+    border-left: 2px solid rgba(26, 248, 255, 0.93);
     padding-left: 15px;
     padding-top: 4px;
     margin-left: 20px;
@@ -81,6 +81,7 @@ export const LeftSection = styled("section")`
     a {
       text-decoration: none;
       padding-bottom: 2px;
+      color:black;
 
       &:hover {
         border-bottom: 2px solid blue;
