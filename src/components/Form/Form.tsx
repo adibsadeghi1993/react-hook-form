@@ -52,12 +52,14 @@ const Form = (props: Props) => {
     },
   });
 
+  
+
   const formSubmitHandler: SubmitHandler<FormInputs> = (data: FormInputs) => {
     console.log(data);
   };
   const values = getValues();
   console.log(values);
-  console.log(watch("email"));
+  console.log(watch("password"));
   return (
     <>
       <HeaderContainer>

@@ -12,6 +12,7 @@ interface Props {
 }
 
 const Inputs = ({label,name,control,error}: Props) => {
+  
     return (
         <>
           <Controller
@@ -35,4 +36,4 @@ const Inputs = ({label,name,control,error}: Props) => {
     )
 }
 
-export default Inputs
+export default React.memo(Inputs)
