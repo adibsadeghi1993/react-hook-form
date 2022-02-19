@@ -2,7 +2,11 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 
 type Props = {
-  marging: number;
+  theme:{
+    color:{
+      primary:string
+    }
+  };
 };
 
 export const StyledHeader = styled("header")`
@@ -86,7 +90,7 @@ export const LeftSection = styled("section")`
   span:last-child {
     padding: 4px 23px;
     border-radius: 15px;
-    background-color: blue;
+    background-color:blue;
     color: white;
     border:2px solid transparent;
 

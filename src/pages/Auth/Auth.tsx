@@ -1,8 +1,8 @@
 import React from "react";
-import Form from "../components/Form/Form";
+import Form from "../../components/Form/Form";
 
-import { FormContainer, Main, SignupImage } from "../styles/Auth.styled";
-import signupImage from "../assets/images/image (1).svg";
+import { FormContainer, Main, SignupImage } from "./Auth.styled";
+import signupImage from "../../assets/images/image (1).svg";
 
 type Props = {};
 

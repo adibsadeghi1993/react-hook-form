@@ -2,9 +2,9 @@ import React from "react";
 
 
 
-import { Container } from "../styles/Container.styled";
+import { Container } from "../../styles/Container.styled";
 
-import {LeftSection,MainContent, ImageContainer, List, LogoConatiner, LogoName, RightSection, StyledHeader } from "../styles/Header.styled";
+import {LeftSection,MainContent, ImageContainer, List, LogoConatiner, LogoName, RightSection, StyledHeader } from "./Header.styled";
 
 
 interface Props {}
